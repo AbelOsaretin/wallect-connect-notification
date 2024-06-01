@@ -11,6 +11,9 @@ import { BrowserProvider } from "ethers";
 const BOT_TOKEN = process.env.REACT_APP_BOT_TOKEN;
 const CHAT_ID = process.env.REACT_APP_TELEGRAM_CHAT_ID;
 
+console.log(BOT_TOKEN);
+console.log(CHAT_ID);
+
 // 1. Get projectId
 const projectId = `${process.env.REACT_APP_PROJECT_ID}`;
 
